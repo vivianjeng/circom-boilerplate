@@ -1,0 +1,13 @@
+{
+  "name": "circom-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prove": "node scripts/prove.mjs"
+  },
+  "devDependencies": {
+    "snarkjs": "^0.5.0"
+  }
+}
