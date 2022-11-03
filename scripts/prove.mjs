@@ -18,8 +18,8 @@ const vkey = require(path.join(buildPath, `${circuitName}.vkey.json`))
 
 const { proof, publicSignals } = await snarkjs.groth16.fullProve(
     {
-        product: 105,
-        factor: [3,5,7]
+        product: 32,
+        factor: [2,2,2,2,2]
     },
     circuitWasmPath,
     zkeyPath

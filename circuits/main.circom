@@ -4,13 +4,13 @@ template SmallOddFactorization(level) {
     signal input product;
     signal input factor[level];
 
-    signal temp1 <== factor[0]*factor[1];
-    signal temp2;
-    for (var i = 2; i < level; i++) {
-        temp2 <== temp1 * factor[i];
+    signal temp[level+1];
+    temp[0] <== 1;
+    for (var i = 0; i < level; i++) {
+        temp[i+1] <== temp[i] * factor[i];
     }
 
-    temp2 === product;
+    temp[level] === product;
 }
 
-component main {public [product, factor]} = SmallOddFactorization(3);
+component main {public [product, factor]} = SmallOddFactorization(5);
